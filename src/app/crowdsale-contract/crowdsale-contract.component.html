@@ -1,0 +1,538 @@
+<main class="main-content">
+    <!--page title start-->
+    <div class="page-title">
+       <div class="container-fluid p-0">
+          <div class="row">
+             <div class="col-md-12">
+                 <div class="row">
+                     <div class="col-md-6 col-9">
+                         
+                         <h4 class="mb-0">Crowdsale Contract </h4> 
+                     </div>
+                     <div class="col-md-6 col-3">
+                          <div class="dropdown float-right">
+                          <button type="button" class="btn btn-default custom-dropdown dropdown-toggle" data-toggle="dropdown">
+                           <i class="fa fa-ellipsis-h pull-right color-blue"></i>
+                          </button>
+                          <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Link 1</a>
+                            <a class="dropdown-item" href="#">Link 2</a>
+                            <a class="dropdown-item" href="#">Link 3</a>
+                          </div>
+                        </div>
+                    </div>
+                 </div>
+             </div>
+          </div>
+       </div>
+    </div>
+    <!--page title end-->
+    <div class="container-fluid">
+       <div class="bg-white form-group-margin">
+       <div class=" pb-45 pt-45 pl-28 pr-28">
+          <div class="row">
+             <div class="col-md-6">
+                <div class="form-group">
+                   <input type="text" class="form-control custom-input-text" placeholder="Enter By Contract Name"/>
+                </div>
+             </div>
+             <div class="col-md-6">
+                <div class="form-group">
+                   <input type="text" class="form-control custom-input-text" placeholder="Add Token Symbol"/>
+                </div>
+                <p class="font-12">Usually 3-4 Letters like ETH, BTC, NEO, WISH etc. Please check that it's unique before 
+                   submission (https://etherscan.com/tokens)
+                </p>
+             </div>
+             <div class="clearfix"></div>
+             <div class="col-md-6">
+                <div class="form-group">
+                   <input type="text" class="form-control custom-input-text" placeholder="Token Name"/>
+                </div>
+                <p class="font-12">Enter name without spaces, usually 5-25 symbols. Lower and uppercase can be used.</p>
+             </div>
+             <div class="col-md-6">
+                <div class="form-group">
+                   <input type="text" class="form-control custom-input-text" placeholder="Decimals"/>
+                </div>
+                <p class="font-12">Usually 3-4 Letters like ETH, BTC, NEO, WISH etc. Please check that it's unique before 
+                   submission (https://etherscan.com/tokens)
+                </p>
+             </div>
+             
+             <div class="col-md-6">
+               <div class="row d-flex align-items-center">
+                <div class="col-md-6">
+                     <label class="fw-700">Chose The Token</label>
+                </div>
+                  <div class="col-md-6">
+                <div class="can-toggle can-toggle--size-large  float-right w-100 text-right">
+                  <input id="c5" type="checkbox">
+                  <label for="c5">
+                    <div class="can-toggle__switch" data-checked="ERC20" data-unchecked="ERC223"></div>
+                  </label>
+                </div>
+             </div>
+               </div>
+            </div>
+            <div class="col-md-6">
+                <div class="tooltip-block form-group">
+                   Defines how many tokens can be sold. After reaching this number sale will be stopped 
+                   automatically. 1-100,000,000,000,000 Numerals are accepted.
+                </div>
+            </div>
+             
+             <div class="clearfix"></div>
+             <div class="col-md-6">
+                <div class="form-group">
+                   <input type="text" class="form-control custom-input-text" placeholder="Token Owner ( Add Token Owner )"/>
+                </div>
+             </div>
+             <div class="col-md-6">
+                <div class="tooltip-block form-group">
+                   ERC-20 is recommended option. Accepted by the most exchanges/
+                   ERC-223 is almost the same as ERC-20. Provides extra safety during token transfers.
+                </div>
+             </div>
+             <div class="clearfix"></div>
+             <div class="col-md-6">
+                <div class="form-group">
+                   <input type="text" class="form-control custom-input-text" placeholder="Investment Storage Address"/>
+                </div>
+             </div>
+             <div class="col-md-6">
+                <div class="tooltip-block form-group">
+                   ETH address(not exchange address). All contributions will be sent to that address after 
+                   finish date is soft cap is reached. Double check the address before entering it.
+                </div>
+             </div>
+             <div class="clearfix"></div>
+             <div class="col-md-6">
+                <div class="form-group">
+                   <input type="text" class="form-control custom-input-text" placeholder="Token Rate"/>
+                </div>
+             </div>
+             <div class="col-md-6">
+                <div class="tooltip-block form-group">
+                   Defines the rate of your token. 1-100000 numerals are accepted Usually 500-5000 tokens 
+                   per 1 ETH.
+                </div>
+             </div>
+             <div class="clearfix"></div>
+             <div class="col-md-6">
+                <div class="form-group">
+                   <input type="text" class="form-control custom-input-text" placeholder="Add Hardcap Tokens"/>
+                </div>
+                <p class="font-12">if softcap > 0 all investments are stored on the vault contract untill the end of crowdsale. If you 
+                   need to get investments on your address right away set softcap - 0. 
+                </p>
+             </div>
+             <div class="col-md-6">
+                <div class="tooltip-block form-group">
+                   Defines how many tokens can be sold. After reaching this number sale will be stopped 
+                   automatically. 1-100,000,000,000,000 Numerals are accepted.
+                </div>
+             </div>
+             <div class="clearfix"></div>
+             <div class="col-md-6">
+                <div class="form-group">
+                   <input type="text" class="form-control custom-input-text" placeholder="Add Softcap Tokens"/>
+                </div>
+             </div>
+             <div class="col-md-6">
+                <div class="tooltip-block form-group">
+                   Defines the minimum number of tokens that needs to be sold for the project continuation
+                   If soft cap is not reached contributors get their investments back. Project gets nothing. 
+                   You can set it to 0 (no soft cap).
+                </div>
+             </div>
+             <div class="clearfix"></div>
+             <div class="col-md-6">
+                <div class="row">
+                   <div class="col-md-4">
+                      <label class="fw-700 mt-10">Start Date</label>
+                   </div>
+                   <div class="col-md-4">
+                      <div class="form-group">
+                         <div class="pos-rel icon-input">
+                            <input type="text" class="form-control custom-input-text form_datetime " placeholder="MM/DD/YYY"/>
+                            <i class="fa fa-calendar"></i>
+                         </div>
+                      </div>
+                   </div>
+                   <div class="col-md-4">
+                      <div class="form-group">
+                      <div class="pos-rel icon-input">
+                             <input type="text" class="form-control custom-input-text timepicker-default" placeholder="HH:MM"/>
+                            <i class="fa fa-clock-o"></i>
+                         </div>
+                        
+                      </div>
+                   </div>
+                </div>
+                <p>Start date/time for sale. No contributions will be accepted before that time.</p>
+             </div>
+             
+             
+           
+             
+          </div>
+          <div class="row">
+            <div class="col-md-6  form-group">
+               <div class="row d-flex align-items-center">
+                <div class="col-md-6">
+                     <label class="fw-700">White List</label>
+                </div>
+                  <div class="col-md-6">
+                <div class="can-toggle can-toggle--size-large  float-right w-100 text-right">
+                  <input id="c11" type="checkbox">
+                  <label for="c11">
+                    <div class="can-toggle__switch" data-checked="ON" data-unchecked="Off"></div>
+                  </label>
+                </div>
+             </div>
+               </div>
+            </div>
+            <div class="col-md-6">
+                <div class="tooltip-block form-group">
+                   Defines how many tokens can be sold. After reaching this number sale will be stopped 
+                   automatically. 1-100,000,000,000,000 Numerals are accepted.
+                </div>
+            </div>
+            
+            <div class="col-md-6  form-group">
+               <div class="row d-flex align-items-center">
+                <div class="col-md-6">
+                     <label class="fw-700">Changing Dates</label>
+                </div>
+                  <div class="col-md-6">
+                <div class="can-toggle can-toggle--size-large  float-right w-100 text-right">
+                  <input id="c1" type="checkbox">
+                  <label for="c1">
+                    <div class="can-toggle__switch" data-checked="ON" data-unchecked="Off"></div>
+                  </label>
+                </div>
+             </div>
+               </div>
+            </div>
+            <div class="col-md-6">
+                <div class="tooltip-block form-group">
+                  Start/Finish Dates can be changed manually after contract deployment. You can prolong sale or finish it early. Otherwise, dates are hardcoded and can't be changed.
+                </div>
+            </div>
+            
+            <div class="col-md-6  form-group">
+               <div class="row d-flex align-items-center">
+                <div class="col-md-6">
+                     <label class="fw-700">Transferable</label>
+                </div>
+                  <div class="col-md-6">
+                <div class="can-toggle can-toggle--size-large  float-right w-100 text-right">
+                  <input id="c2" type="checkbox">
+                  <label for="c2">
+                    <div class="can-toggle__switch" data-checked="ON" data-unchecked="Off"></div>
+                  </label>
+                </div>
+             </div>
+               </div>
+            </div>
+            <div class="col-md-6">
+                <div class="tooltip-block form-group">
+                   User can limit transfer of tokens from Contributors until token completion to reduce the speculations. Off is recommended
+                </div>
+            </div>
+            
+            <div class="col-md-6  form-group">
+               <div class="row d-flex align-items-center">
+                <div class="col-md-6">
+                     <label class="fw-700">Min. & Max Investment Limitations</label>
+                </div>
+                  <div class="col-md-6 ">
+                <div class="can-toggle can-toggle--size-large  float-right w-100 text-right">
+                  <input id="c3" type="checkbox">
+                  <label for="c3">
+                    <div class="can-toggle__switch" data-checked="ON" data-unchecked="Off"></div>
+                  </label>
+                </div>
+             </div>
+               </div>
+            </div>
+            <div class="col-md-6">
+                <div class="tooltip-block form-group">
+                   You can specify minimum/maximum accepted contributions (in ETH). For example, accept contributions from 0.05 ETH to 3000 ETH only.
+                </div>
+            </div>
+            
+          </div>
+          <div class="row">
+             <div class="col-md-6">
+                <div class="row">
+                   <div class="col-md-4">
+                      <label class="fw-700 mt-10">Minimum</label>
+                   </div>
+                   <div class="col-md-8">
+                      <div class="form-group">
+                         <input type="text" class="form-control custom-input-text" placeholder="Add Minimum Ammount"/>
+                      </div>
+                   </div>
+                </div>
+                <p>Minimum amount accepted "0" - No Minimum Limitation.</p>
+             </div>
+             <div class="col-md-6">
+                <div class="row">
+                   <div class="col-md-4">
+                      <label class="fw-700 mt-10">Minimum</label>
+                   </div>
+                   <div class="col-md-8">
+                      <div class="form-group">
+                         <input type="text" class="form-control custom-input-text" placeholder="Add Minimum Ammount"/>
+                      </div>
+                   </div>
+                </div>
+                <p>Minimum amount accepted "0" - No Minimum Limitation.</p>
+             </div>
+          </div>
+          </div>
+          
+          <div class="blue-heading">
+            <h2>Add Bonus <a href="#" class="btn btn-primary text-uppercase white-bg pull-right" data-toggle="collapse" data-target="#bonus" aria-expanded="false" aria-controls="bonus"><i class="fa fa-plus"></i> Add</a></h2>
+          </div>
+          <div class="gredinat-bg pull-left w-100 pb-28 pt-28 pl-28 pr-28 collapse" id="bonus">
+          
+            
+            <div class="row">
+            
+            <div class="col-md-12 text-right form-group">
+                <a href="#" class="btn btn-default gredinat-btn fw-700 border-radius-btn" data-toggle="collapse" data-target="#bonus" aria-expanded="false" aria-controls="bonus">Close</a>
+            </div>
+                <div class="col-md-6">
+                     <div class="row">
+                   <div class="col-md-4">
+                      <label class="fw-700 mt-10 color-white">Bonus</label>
+                   </div>
+                   <div class="col-md-8">
+                      <div class="form-group">
+                         <input type="text" class="form-control custom-input-text" placeholder="28%"/>
+                      </div>
+                   </div>
+                </div>
+                </div>
+                
+                <div class="col-md-6">
+                 <div class="tooltip-block form-group d-flex align-items-center">
+                   Usually 0.1-100% How many extra tokens will be sent to contributor.
+                </div>
+                </div>
+                
+                
+                 <div class="col-md-6  form-group">
+               <div class="row d-flex align-items-center">
+                <div class="col-md-6">
+                     <label class="fw-700 color-white">Depends on Amount of Sold Tokens</label>
+                </div>
+                  <div class="col-md-6">
+                <div class="can-toggle can-toggle--size-large orange-gre  float-right w-100 text-right">
+                  <input id="c12" type="checkbox">
+                  <label for="c12">
+                    <div class="can-toggle__switch" data-checked="ON" data-unchecked="Off"></div>
+                  </label>
+                </div>
+             </div>
+               </div>
+            </div>
+         
+            </div>
+            
+            <div class="row">
+                <div class="col-md-6">
+                     <div class="row">
+                   <div class="col-md-4">
+                      <label class="fw-700 mt-10 color-white">From</label>
+                   </div>
+                   <div class="col-md-8">
+                      <div class="form-group">
+                         <input type="text" class="form-control custom-input-text" placeholder="Add Value"/>
+                      </div>
+                   </div>
+                </div>
+                </div>
+                
+                 <div class="col-md-6">
+                     <div class="row">
+                   <div class="col-md-4">
+                      <label class="fw-700 mt-10 color-white">To</label>
+                   </div>
+                   <div class="col-md-8">
+                      <div class="form-group">
+                         <input type="text" class="form-control custom-input-text" placeholder="Add Value"/>
+                      </div>
+                   </div>
+                </div>
+                </div>
+                
+                 <div class="col-md-6  form-group">
+               <div class="row d-flex align-items-center">
+                <div class="col-md-6">
+                     <label class="fw-700 color-white">Depends on Date & Time</label>
+                </div>
+                  <div class="col-md-6">
+                <div class="can-toggle can-toggle--size-large orange-gre  float-right w-100 text-right">
+                  <input id="c13" type="checkbox">
+                  <label for="c13">
+                    <div class="can-toggle__switch" data-checked="ON" data-unchecked="Off"></div>
+                  </label>
+                </div>
+             </div>
+               </div>
+            </div>
+            
+            <div class="col-md-6">
+                 <div class="tooltip-block form-group d-flex align-items-center">
+                   Usually 0.1-100% How many extra tokens will be sent to contributor.
+                </div>
+                </div>                    
+                
+                 <div class="col-md-6">
+                <div class="row">
+                   <div class="col-md-4">
+                      <label class="fw-700 color-white mt-10">Start Date</label>
+                   </div>
+                   <div class="col-md-4">
+                      <div class="form-group">
+                        <div class="pos-rel icon-input">
+                            <input type="text" class="form-control custom-input-text form_datetime " placeholder="MM/DD/YYY"/>
+                            <i class="fa fa-calendar"></i>
+                         </div>
+                      </div>
+                   </div>
+                   <div class="col-md-4">
+                      <div class="form-group">
+                        <div class="pos-rel icon-input">
+                            <input type="text" class="form-control custom-input-text form_datetime " placeholder="MM/DD/YYY"/>
+                            <i class="fa fa-calendar"></i>
+                         </div>
+                      </div>
+                   </div>
+                </div>
+             </div>
+             
+              <div class="col-md-6">
+                <div class="row">
+                   <div class="col-md-4">
+                      <label class="fw-700 color-white mt-10">Start Date</label>
+                   </div>
+                   <div class="col-md-4">
+                      <div class="form-group">
+                        <div class="pos-rel icon-input">
+                            <input type="text" class="form-control custom-input-text form_datetime " placeholder="MM/DD/YYY"/>
+                            <i class="fa fa-calendar"></i>
+                         </div>
+                      </div>
+                   </div>
+                   <div class="col-md-4">
+                      <div class="form-group">
+                         <div class="pos-rel icon-input">
+                            <input type="text" class="form-control custom-input-text form_datetime " placeholder="MM/DD/YYY"/>
+                            <i class="fa fa-calendar"></i>
+                         </div>
+                      </div>
+                   </div>
+                </div>
+             </div>
+              
+                
+            </div>
+          </div>
+          
+          <div class="graph-section">
+            <img src="assets/img/graph-1.png" alt="" title="" class="img-responsive w-100"/>
+          </div>
+          
+           <div class="blue-heading">
+            <h2>Add Amount Bonus <a href="#" class="btn btn-primary text-uppercase white-bg pull-right" data-toggle="collapse" data-target="#amount-bonus" aria-expanded="false" aria-controls="amount-bonus"><i class="fa fa-plus"></i> Add</a></h2>
+          </div>
+          <div class="gredinat-bg pull-left w-100 pb-28 pt-28 pl-28 pr-28 collapse" id="amount-bonus">
+          
+            
+            <div class="row">
+            
+            <div class="col-md-12 text-right form-group">
+                <a href="#" class="btn btn-default gredinat-btn fw-700 border-radius-btn" data-toggle="collapse" data-target="#amount-bonus" aria-expanded="false" aria-controls="amount-bonus">Cancel</a>
+            </div>
+                <div class="col-md-6">
+                     <div class="row">
+                   <div class="col-md-4">
+                      <label class="fw-700 mt-10 color-white">Bonus</label>
+                   </div>
+                   <div class="col-md-8">
+                      <div class="form-group">
+                         <input type="text" class="form-control custom-input-text" placeholder="28%"/>
+                      </div>
+                   </div>
+                </div>
+                </div>
+                
+                <div class="col-md-6">
+                 <div class="tooltip-block form-group d-flex align-items-center">
+                   Usually 0.1-100% How many extra tokens will be sent to contributor.
+                </div>
+                </div>
+                
+                
+            </div>
+            
+            <div class="row">
+                <div class="col-md-6">
+                     <div class="row">
+                   <div class="col-md-4">
+                      <label class="fw-700 mt-10 color-white">Min. Amount</label>
+                   </div>
+                   <div class="col-md-8">
+                      <div class="form-group">
+                         <input type="text" class="form-control custom-input-text" placeholder="Add Min. Value"/>
+                      </div>
+                   </div>
+                </div>
+                </div>
+                
+                 <div class="col-md-6">
+                     <div class="row">
+                   <div class="col-md-4">
+                      <label class="fw-700 mt-10 color-white">Max Amount</label>
+                   </div>
+                   <div class="col-md-8">
+                      <div class="form-group">
+                         <input type="text" class="form-control custom-input-text" placeholder="Add Max. Value"/>
+                      </div>
+                   </div>
+                </div>
+                </div>
+                
+              
+             
+              
+                
+            </div>
+          </div>
+          <div class="graph-section">
+            <img src="assets/img/graph-1.png" alt="" title="" class="img-responsive w-100"/>
+          </div>
+          
+          <div class="blue-heading" style="margin-bottom:25px;">
+            <h2>Add Extra Addresses <a href="#" class="btn btn-primary text-uppercase white-bg pull-right" data-toggle="collapse" data-target="#address" aria-expanded="false" aria-controls="address"><i class="fa fa-plus"></i> Add</a></h2>
+          </div>
+          
+          <div class="bg-white pull-left w-100 pb-45 pt-45 pl-28 pr-28 collapse" id="address">
+          
+            <div class="row" >
+                <div class="col-md-6 text-left">
+                    <img src="assets/img/pie-chart.png" alt="" title="" class="img-responsive w-100"/>
+                </div>
+            </div>
+            
+          </div>
+          
+          
+       </div>
+    </div>
+ </main>
