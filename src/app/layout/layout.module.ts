@@ -1,7 +1,6 @@
-import { ContractComponent } from '../contract/contract.component';
-import { CrowdsaleContractComponent } from '../crowdsale-contract/crowdsale-contract.component';
+import { ListOfContractModule } from '../list-of-contract/list-of-contract.module';
 import { HowItWorksComponent } from '../how-it-works/how-it-works.component';
-import { ListOfContractComponent } from '../list-of-contract/list-of-contract.component';
+import {CrowdsaleContractComponent} from '../crowdsale-contract/crowdsale-contract.component';
 import { ProfileComponent } from '../profile/profile.component';
 import { BuyTokensComponent } from '../buy-tokens/buy-tokens.component';
 import { IndexComponent } from '../index/index.component';
@@ -15,22 +14,19 @@ import { FormsModule } from '@angular/forms';
   imports: [
     CommonModule,
     FormsModule,
+    ListOfContractModule,
     RouterModule.forChild(layoutRoutes),
   ],
   declarations: [
-    ContractComponent,
-    CrowdsaleContractComponent,
     HowItWorksComponent,
-    ListOfContractComponent,
+    CrowdsaleContractComponent,
     ProfileComponent,
     BuyTokensComponent,
     IndexComponent
   ],
   exports: [
-    ContractComponent,
-    CrowdsaleContractComponent,
     HowItWorksComponent,
-    ListOfContractComponent,
+    CrowdsaleContractComponent,
     ProfileComponent,
     BuyTokensComponent,
     IndexComponent

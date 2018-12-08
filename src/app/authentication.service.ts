@@ -3,7 +3,9 @@ import { Router } from '@angular/router';
 import { Observable, of, throwError } from 'rxjs';
 import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
 import { catchError, tap, map } from 'rxjs/operators';
-
+import { BehaviorSubject } from 'rxjs';
+import { Subject } from 'rxjs';
+import { Contracts } from './schemas/contracts';
 export interface UserDetails {
     _id: string;
     username: string;
@@ -22,6 +24,13 @@ export interface TokenPayload {
 
 @Injectable()
 export class AuthenticationService {
+    private emitChangeSource = new Subject<any>();
+    emitChange(change: any) {
+        this.emitChangeSource.next(change);
+    }
+    getContractDetail(){  
+        return this.emitChangeSource.asObservable();  
+    }  
     private token: string;
 
     constructor(private http: HttpClient, private router: Router) {}
