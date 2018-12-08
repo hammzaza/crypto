@@ -9,19 +9,21 @@ var port = process.env.port || 8080;
 mongoose.connect(config.url);
 
 var routesApi = require('./api/routes/index');
-
+var contracts = require('./api/routes/contract');
 
 app.set('views', path.join(__dirname, 'dist/crypto-project'));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(passport.initialize());
 app.use(express.static(path.join(__dirname, 'dist/crypto-project')));
-app.use('/api', routesApi);
 
 require('./api/config/passport');
-// require('./api/routes/addcontract')(app);
-// require('./api/routes/authenticate')(app);
-// require('./api/routes/get-contracts')(app);
+
+app.use('/api', routesApi);
+
+app.use('/contracts',contracts);
+
+
 app.get('*',function(req,res){
     res.sendFile(path.join(__dirname,'dist/crypto-project/index.html'));
 });

@@ -33,12 +33,12 @@
           <div class="row">
              <div class="col-md-6">
                 <div class="form-group">
-                   <input type="text" class="form-control custom-input-text" placeholder="Enter By Contract Name"/>
+                   <input type="text" class="form-control custom-input-text" [(ngModel)] = "contracts.contractname" placeholder="Enter By Contract Name" />
                 </div>
              </div>
              <div class="col-md-6">
                 <div class="form-group">
-                   <input type="text" class="form-control custom-input-text" placeholder="Add Token Symbol"/>
+                   <input type="text" class="form-control custom-input-text" [(ngModel)] = "contracts.tokensymbol" placeholder="Add Token Symbol"/>
                 </div>
                 <p class="font-12">Usually 3-4 Letters like ETH, BTC, NEO, WISH etc. Please check that it's unique before 
                    submission (https://etherscan.com/tokens)
@@ -47,13 +47,13 @@
              <div class="clearfix"></div>
              <div class="col-md-6">
                 <div class="form-group">
-                   <input type="text" class="form-control custom-input-text" placeholder="Token Name"/>
+                   <input type="text" class="form-control custom-input-text" [(ngModel)] = "contracts.tokenname" placeholder="Token Name"/>
                 </div>
                 <p class="font-12">Enter name without spaces, usually 5-25 symbols. Lower and uppercase can be used.</p>
              </div>
              <div class="col-md-6">
                 <div class="form-group">
-                   <input type="text" class="form-control custom-input-text" placeholder="Decimals"/>
+                   <input type="text" class="form-control custom-input-text" [(ngModel)] = "contracts.decimals" placeholder="Decimals"/>
                 </div>
                 <p class="font-12">Usually 3-4 Letters like ETH, BTC, NEO, WISH etc. Please check that it's unique before 
                    submission (https://etherscan.com/tokens)
@@ -67,7 +67,7 @@
                 </div>
                   <div class="col-md-6">
                 <div class="can-toggle can-toggle--size-large  float-right w-100 text-right">
-                  <input id="c5" type="checkbox">
+                  <input id="c5" type="checkbox" [(ngModel)] = "contracts.tokentype">
                   <label for="c5">
                     <div class="can-toggle__switch" data-checked="ERC20" data-unchecked="ERC223"></div>
                   </label>
@@ -85,7 +85,7 @@
              <div class="clearfix"></div>
              <div class="col-md-6">
                 <div class="form-group">
-                   <input type="text" class="form-control custom-input-text" placeholder="Token Owner ( Add Token Owner )"/>
+                   <input type="text" class="form-control custom-input-text" [(ngModel)] = "contracts.tokenowner" placeholder="Token Owner ( Add Token Owner )"/>
                 </div>
              </div>
              <div class="col-md-6">
@@ -97,7 +97,7 @@
              <div class="clearfix"></div>
              <div class="col-md-6">
                 <div class="form-group">
-                   <input type="text" class="form-control custom-input-text" placeholder="Investment Storage Address"/>
+                   <input type="text" class="form-control custom-input-text" [(ngModel)] = "contracts.invstad" placeholder="Investment Storage Address"/>
                 </div>
              </div>
              <div class="col-md-6">
@@ -109,7 +109,7 @@
              <div class="clearfix"></div>
              <div class="col-md-6">
                 <div class="form-group">
-                   <input type="text" class="form-control custom-input-text" placeholder="Token Rate"/>
+                   <input type="text" class="form-control custom-input-text" [(ngModel)] = "contracts.tokenrate" placeholder="Token Rate"/>
                 </div>
              </div>
              <div class="col-md-6">
@@ -121,7 +121,7 @@
              <div class="clearfix"></div>
              <div class="col-md-6">
                 <div class="form-group">
-                   <input type="text" class="form-control custom-input-text" placeholder="Add Hardcap Tokens"/>
+                   <input type="text" class="form-control custom-input-text" [(ngModel)] = "contracts.hardcaptokens" placeholder="Add Hardcap Tokens"/>
                 </div>
                 <p class="font-12">if softcap > 0 all investments are stored on the vault contract untill the end of crowdsale. If you 
                    need to get investments on your address right away set softcap - 0. 
@@ -136,7 +136,7 @@
              <div class="clearfix"></div>
              <div class="col-md-6">
                 <div class="form-group">
-                   <input type="text" class="form-control custom-input-text" placeholder="Add Softcap Tokens"/>
+                   <input type="text" class="form-control custom-input-text" [(ngModel)] = "contracts.softcaptokens" placeholder="Add Softcap Tokens"/>
                 </div>
              </div>
              <div class="col-md-6">
@@ -155,7 +155,7 @@
                    <div class="col-md-4">
                       <div class="form-group">
                          <div class="pos-rel icon-input">
-                            <input type="text" class="form-control custom-input-text form_datetime " placeholder="MM/DD/YYY"/>
+                            <input type="text" class="form-control custom-input-text form_datetime" [(ngModel)] = "contracts.startdate" placeholder="MM/DD/YYY"/>
                             <i class="fa fa-calendar"></i>
                          </div>
                       </div>
@@ -163,7 +163,7 @@
                    <div class="col-md-4">
                       <div class="form-group">
                       <div class="pos-rel icon-input">
-                             <input type="text" class="form-control custom-input-text timepicker-default" placeholder="HH:MM"/>
+                             <input type="text" class="form-control custom-input-text timepicker-default" [(ngModel)] = "contracts.starttime" placeholder="HH:MM"/>
                             <i class="fa fa-clock-o"></i>
                          </div>
                         
@@ -185,7 +185,7 @@
                 </div>
                   <div class="col-md-6">
                 <div class="can-toggle can-toggle--size-large  float-right w-100 text-right">
-                  <input id="c11" type="checkbox">
+                  <input id="c11" type="checkbox" [(ngModel)] = "contracts.whitelist">
                   <label for="c11">
                     <div class="can-toggle__switch" data-checked="ON" data-unchecked="Off"></div>
                   </label>
@@ -207,7 +207,7 @@
                 </div>
                   <div class="col-md-6">
                 <div class="can-toggle can-toggle--size-large  float-right w-100 text-right">
-                  <input id="c1" type="checkbox">
+                  <input id="c1" type="checkbox" [(ngModel)] = "contracts.changingdates">
                   <label for="c1">
                     <div class="can-toggle__switch" data-checked="ON" data-unchecked="Off"></div>
                   </label>
@@ -228,7 +228,7 @@
                 </div>
                   <div class="col-md-6">
                 <div class="can-toggle can-toggle--size-large  float-right w-100 text-right">
-                  <input id="c2" type="checkbox">
+                  <input id="c2" type="checkbox" [(ngModel)] = "contracts.transferable">
                   <label for="c2">
                     <div class="can-toggle__switch" data-checked="ON" data-unchecked="Off"></div>
                   </label>
@@ -249,7 +249,7 @@
                 </div>
                   <div class="col-md-6 ">
                 <div class="can-toggle can-toggle--size-large  float-right w-100 text-right">
-                  <input id="c3" type="checkbox">
+                  <input id="c3" type="checkbox" [(ngModel)] = "contracts.invlimit">
                   <label for="c3">
                     <div class="can-toggle__switch" data-checked="ON" data-unchecked="Off"></div>
                   </label>
@@ -272,7 +272,7 @@
                    </div>
                    <div class="col-md-8">
                       <div class="form-group">
-                         <input type="text" class="form-control custom-input-text" placeholder="Add Minimum Ammount"/>
+                         <input type="text" class="form-control custom-input-text"[(ngModel)] = "contracts.minlimit" placeholder="Add Minimum Ammount"/>
                       </div>
                    </div>
                 </div>
@@ -281,11 +281,11 @@
              <div class="col-md-6">
                 <div class="row">
                    <div class="col-md-4">
-                      <label class="fw-700 mt-10">Minimum</label>
+                      <label class="fw-700 mt-10">Maximum</label>
                    </div>
                    <div class="col-md-8">
                       <div class="form-group">
-                         <input type="text" class="form-control custom-input-text" placeholder="Add Minimum Ammount"/>
+                         <input type="text" class="form-control custom-input-text" [(ngModel)] = "contracts.maxlimit" placeholder="Add Maximum Ammount"/>
                       </div>
                    </div>
                 </div>
@@ -312,7 +312,7 @@
                    </div>
                    <div class="col-md-8">
                       <div class="form-group">
-                         <input type="text" class="form-control custom-input-text" placeholder="28%"/>
+                         <input type="text" class="form-control custom-input-text" [(ngModel)] = "contracts.bonus1" placeholder="28%"/>
                       </div>
                    </div>
                 </div>
@@ -332,7 +332,7 @@
                 </div>
                   <div class="col-md-6">
                 <div class="can-toggle can-toggle--size-large orange-gre  float-right w-100 text-right">
-                  <input id="c12" type="checkbox">
+                  <input id="c12" type="checkbox" [(ngModel)] = "contracts.bonus2">
                   <label for="c12">
                     <div class="can-toggle__switch" data-checked="ON" data-unchecked="Off"></div>
                   </label>
@@ -351,7 +351,7 @@
                    </div>
                    <div class="col-md-8">
                       <div class="form-group">
-                         <input type="text" class="form-control custom-input-text" placeholder="Add Value"/>
+                         <input type="text" class="form-control custom-input-text" [(ngModel)] = "contracts.bonus3" placeholder="Add Value"/>
                       </div>
                    </div>
                 </div>
@@ -364,7 +364,7 @@
                    </div>
                    <div class="col-md-8">
                       <div class="form-group">
-                         <input type="text" class="form-control custom-input-text" placeholder="Add Value"/>
+                         <input type="text" class="form-control custom-input-text" [(ngModel)] = "contracts.bonus4" placeholder="Add Value"/>
                       </div>
                    </div>
                 </div>
@@ -377,7 +377,7 @@
                 </div>
                   <div class="col-md-6">
                 <div class="can-toggle can-toggle--size-large orange-gre  float-right w-100 text-right">
-                  <input id="c13" type="checkbox">
+                  <input id="c13" type="checkbox" [(ngModel)] = "contracts.bonus5">
                   <label for="c13">
                     <div class="can-toggle__switch" data-checked="ON" data-unchecked="Off"></div>
                   </label>
@@ -400,7 +400,7 @@
                    <div class="col-md-4">
                       <div class="form-group">
                         <div class="pos-rel icon-input">
-                            <input type="text" class="form-control custom-input-text form_datetime " placeholder="MM/DD/YYY"/>
+                            <input type="text" class="form-control custom-input-text form_datetime" [(ngModel)] = "contracts.bonus6" placeholder="MM/DD/YYY"/>
                             <i class="fa fa-calendar"></i>
                          </div>
                       </div>
@@ -408,7 +408,7 @@
                    <div class="col-md-4">
                       <div class="form-group">
                         <div class="pos-rel icon-input">
-                            <input type="text" class="form-control custom-input-text form_datetime " placeholder="MM/DD/YYY"/>
+                            <input type="text" class="form-control custom-input-text form_datetime" [(ngModel)] = "contracts.bonus7" placeholder="MM/DD/YYY"/>
                             <i class="fa fa-calendar"></i>
                          </div>
                       </div>
@@ -424,7 +424,7 @@
                    <div class="col-md-4">
                       <div class="form-group">
                         <div class="pos-rel icon-input">
-                            <input type="text" class="form-control custom-input-text form_datetime " placeholder="MM/DD/YYY"/>
+                            <input type="text" class="form-control custom-input-text form_datetime" [(ngModel)] = "contracts.bonus8" placeholder="MM/DD/YYY"/>
                             <i class="fa fa-calendar"></i>
                          </div>
                       </div>
@@ -432,7 +432,7 @@
                    <div class="col-md-4">
                       <div class="form-group">
                          <div class="pos-rel icon-input">
-                            <input type="text" class="form-control custom-input-text form_datetime " placeholder="MM/DD/YYY"/>
+                            <input type="text" class="form-control custom-input-text form_datetime" [(ngModel)] = "contracts.bonus9" placeholder="MM/DD/YYY"/>
                             <i class="fa fa-calendar"></i>
                          </div>
                       </div>
@@ -466,7 +466,7 @@
                    </div>
                    <div class="col-md-8">
                       <div class="form-group">
-                         <input type="text" class="form-control custom-input-text" placeholder="28%"/>
+                         <input type="text" class="form-control custom-input-text" [(ngModel)] = "contracts.amountbonus1" placeholder="28%"/>
                       </div>
                    </div>
                 </div>
@@ -489,7 +489,7 @@
                    </div>
                    <div class="col-md-8">
                       <div class="form-group">
-                         <input type="text" class="form-control custom-input-text" placeholder="Add Min. Value"/>
+                         <input type="text" class="form-control custom-input-text" [(ngModel)] = "contracts.amountbonus2" placeholder="Add Min. Value"/>
                       </div>
                    </div>
                 </div>
@@ -497,21 +497,16 @@
                 
                  <div class="col-md-6">
                      <div class="row">
-                   <div class="col-md-4">
-                      <label class="fw-700 mt-10 color-white">Max Amount</label>
-                   </div>
-                   <div class="col-md-8">
-                      <div class="form-group">
-                         <input type="text" class="form-control custom-input-text" placeholder="Add Max. Value"/>
-                      </div>
-                   </div>
+                        <div class="col-md-4">
+                           <label class="fw-700 mt-10 color-white">Max Amount</label>
+                        </div>
+                        <div class="col-md-8">
+                           <div class="form-group">
+                              <input type="text" class="form-control custom-input-text" [(ngModel)] = "contracts.amountbonus3" placeholder="Add Max. Value"/>
+                           </div>
+                        </div>
+                     </div>
                 </div>
-                </div>
-                
-              
-             
-              
-                
             </div>
           </div>
           <div class="graph-section">
@@ -519,17 +514,7 @@
           </div>
           
           <div class="blue-heading" style="margin-bottom:25px;">
-            <h2>Add Extra Addresses <a href="#" class="btn btn-primary text-uppercase white-bg pull-right" data-toggle="collapse" data-target="#address" aria-expanded="false" aria-controls="address"><i class="fa fa-plus"></i> Add</a></h2>
-          </div>
-          
-          <div class="bg-white pull-left w-100 pb-45 pt-45 pl-28 pr-28 collapse" id="address">
-          
-            <div class="row" >
-                <div class="col-md-6 text-left">
-                    <img src="assets/img/pie-chart.png" alt="" title="" class="img-responsive w-100"/>
-                </div>
-            </div>
-            
+            <h2>Add Extra Addresses <button (click)="postData();" class="btn btn-primary text-uppercase white-bg pull-right"><i class="fa fa-plus"></i>Submit</button></h2>
           </div>
           
           
